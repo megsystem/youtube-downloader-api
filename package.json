@@ -1,0 +1,34 @@
+{
+  "name": "api-downloader-youtube",
+  "version": "0.0.1",
+  "description": "A simple Node app that download youtube video (mp3 and mp4)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "fastify": "^4.10.0",
+    "handlebars": "^4.7.7",
+    "@fastify/formbody": "^7.3.0",
+    "@fastify/static": "^6.5.0",
+    "@fastify/view": "^7.1.2",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "ytdl-core": "^4.11.2",
+    "ffmpeg-static": "^5.1.0",
+    "content-disposition": "^0.5.4",
+    "child_process": "^1.0.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "repository": {
+    "url": "https://github.com/MEGSystem/youtube-downloader-api"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node"
+  ]
+}
