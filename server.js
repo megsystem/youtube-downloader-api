@@ -10,7 +10,9 @@ const app = express();
 const port = 3000;
 const path = require('path');
 
-// code made by @megsystem, plz give credit :)
+///////////////////////////////////////////////////////////
+// code made by @megsystem on github, plz give credit :) //
+///////////////////////////////////////////////////////////
 
 //setup ffmpeg fluent
 fluent_ffmpeg.setFfmpegPath(ffmpegPath);
@@ -20,17 +22,15 @@ app.use(cors());
 app.use(express.json());
 app.listen(port, () => console.log(`Server is running on port ${port}`));
 
-// get start
-app.get('/youtube', function(req, res) {
-  try {
-    res.sendFile(path.join(__dirname, '/src/index.html'));
-  } catch(err) {
-    console.log("error ", err);
-  }
-});
-
+// empty page // for testing //
 app.get('/', function(req, res) {
-  res.send('Working in progress - giovanni giannone');
+  try {
+    res.send('Working in progress - @giovanni_giannone_ / megsystem');
+  } catch (err) {
+    return res
+      .status(400)
+      .json({ success: false, error: err });
+  }
 });
 
 // download mp4
@@ -103,7 +103,9 @@ app.get("/mp4", async (req, res) => {
     });
   } catch (err) {
     console.log("error ", err);
-    res.redirect(`http://${req.headers.host}?error=downloadError`);
+    return res
+      .status(400)
+      .json({ success: false, error: err });
   }
 });
 
@@ -134,6 +136,8 @@ app.get("/mp3", async (req, res) => {
     });
   } catch (err) {
     console.log("error ", err);
-    res.redirect(`http://${req.headers.host}?error=downloadError`);
+    return res
+      .status(400)
+      .json({ success: false, error: err });
   }
 });
