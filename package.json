@@ -7,11 +7,6 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "fastify": "^4.10.0",
-    "handlebars": "^4.7.7",
-    "@fastify/formbody": "^7.3.0",
-    "@fastify/static": "^6.5.0",
-    "@fastify/view": "^7.1.2",
     "express": "^4.18.2",
     "cors": "^2.8.5",
     "ytdl-core": "^4.11.2",
